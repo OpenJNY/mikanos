@@ -19,3 +19,18 @@ build
 # confirm the artifacts
 ls -l Build/MikanLoaderX64/DEBUG_CLANG38/X64/Loader.efi
 ```
+
+## Build kernel
+
+```bash
+cd /workspace/mikanos/kernel
+./build
+```
+
+## Test
+
+While launching `vcxsrv` on windows 10, execute the following command:
+
+```bash
+$HOME/osbook/devenv/run_qemu.sh $HOME/edk2/Build/MikanLoaderX64/DEBUG_CLANG38/X64/Loader.efi /workspaces/mikanos/kernel/kernel.elf 
+```
